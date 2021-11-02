@@ -10,5 +10,9 @@
     <bean id="musicBean"
           class="com.remizov.springcourse.RetroMusic">
     </bean>
+    <bean id="musicPlayer"
+          class="com.remizov.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 
 </beans>
