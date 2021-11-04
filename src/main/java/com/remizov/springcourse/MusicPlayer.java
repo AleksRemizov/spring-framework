@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MusicPlayer {
-    private List<Music>musicList = new ArrayList<>();
+    private List<Music>musicList;
     private String name;
     private int volume;
 
-    public MusicPlayer() {
+    public MusicPlayer(List<Music> musicList) {
+        this.musicList=musicList;
     }
-
     public List<Music> getMusicList() {
         return musicList;
     }
