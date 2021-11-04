@@ -17,14 +17,14 @@
     <bean id="musicBean2"
           class="com.remizov.springcourse.ClassicalMusic"
           init-method="doMyInit"
-          destroy-method="doMyDestroy">
+          destroy-method="doMyDestroy"
+           factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicBean3"
           class="com.remizov.springcourse.RockMusic"
           init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          scope="prototype">
+          destroy-method="doMyDestroy">
     </bean>
     <bean id="musicPlayer"
           class="com.remizov.springcourse.MusicPlayer"

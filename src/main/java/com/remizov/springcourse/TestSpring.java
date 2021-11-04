@@ -8,9 +8,9 @@ public class TestSpring {
                 "applicationContext.xml"
         );
         MusicPlayer firstMusicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
-        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
-        //firstMusicPlayer.playMusic();
-        secondMusicPlayer.playMusic();
+        //MusicPlayer secondMusicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
+        firstMusicPlayer.playMusic();
+        //secondMusicPlayer.playMusic();
 
         context.close();
     }
