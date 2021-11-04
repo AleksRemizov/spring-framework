@@ -20,7 +20,8 @@
           class="com.remizov.springcourse.RockMusic">
     </bean>
     <bean id="musicPlayer"
-          class="com.remizov.springcourse.MusicPlayer">
+          class="com.remizov.springcourse.MusicPlayer"
+          scope="prototype">
         <property name="musicList" >
                   <list>
                       <ref bean="musicBean1"/>
