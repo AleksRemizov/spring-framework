@@ -2,10 +2,20 @@ package com.remizov.springcourse;
 
 import org.springframework.stereotype.Component;
 
-@Component("hardRock")
+import java.util.ArrayList;
+import java.util.List;
+
+@Component("rockMusic")
 public class RockMusic implements Music{
+    List<String> songs = new ArrayList<>();
+    {
+        songs.add("Till Lindemann 'Любимый город' ");
+        songs.add("DREZDEN" + " ЭДЕЛЬВЕЙС");
+        songs.add("Земфира" + " пальто");
+
+    }
     @Override
-    public String getSong() {
-        return "Till Lindemann 'Любимый город' ";
+    public List<String> getSong() {
+        return songs;
     }
 }
