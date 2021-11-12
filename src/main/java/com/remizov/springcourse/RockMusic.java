@@ -7,6 +7,7 @@ import java.util.List;
 
 @Component("rockMusic")
 public class RockMusic implements Music{
+
     List<String> songs = new ArrayList<>();
     {
         songs.add("Till Lindemann 'Любимый город' ");
@@ -14,6 +15,8 @@ public class RockMusic implements Music{
         songs.add("Земфира" + " пальто");
 
     }
+
+
     @Override
     public List<String> getSong() {
         return songs;
