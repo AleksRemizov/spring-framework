@@ -1,4 +1,4 @@
-package com.remizov.springcourse;
+package com.remizov.springcourse.music;
 
 import java.util.List;
 

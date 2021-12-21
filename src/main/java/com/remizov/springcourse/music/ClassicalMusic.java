@@ -1,12 +1,12 @@
-package com.remizov.springcourse;
+package com.remizov.springcourse.music;
 
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class ClassicalMusic implements Music{
+
+public class ClassicalMusic implements Music {
     List<String> songs = new ArrayList<>();
     {
         songs.add("Antonio Vivaldi 'La primavera'");

@@ -1,14 +1,14 @@
-package com.remizov.springcourse;
+package com.remizov.springcourse.music;
 
+import com.remizov.springcourse.music.Music;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-@Scope("prototype")
-public class RetroMusic implements Music{
+
+public class RetroMusic implements Music {
     List<String>songs = new ArrayList<>();
 
     {

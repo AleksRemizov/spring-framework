@@ -1,12 +1,13 @@
-package com.remizov.springcourse;
+package com.remizov.springcourse.music;
 
+import com.remizov.springcourse.music.Music;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component("rockMusic")
-public class RockMusic implements Music{
+
+public class RockMusic implements Music {
 
     List<String> songs = new ArrayList<>();
     {
