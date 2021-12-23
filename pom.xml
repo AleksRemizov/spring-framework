@@ -20,6 +20,8 @@
     <spring.version>5.3.12</spring.version>
     <jetty-maven-plugin.version>10.0.1</jetty-maven-plugin.version>
     <thymeleaf-spring5.version>3.0.12.RELEASE</thymeleaf-spring5.version>
+    <javax.servlet.version>4.0.0</javax.servlet.version>
+
   </properties>
 
   <dependencies>
@@ -49,6 +51,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${javax.servlet.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
