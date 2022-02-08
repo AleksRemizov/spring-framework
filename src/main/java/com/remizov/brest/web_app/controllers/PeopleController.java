@@ -1,11 +1,10 @@
 package com.remizov.brest.web_app.controllers;
 
 import com.remizov.brest.web_app.dao.PersonDao;
+import com.remizov.brest.web_app.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/people")
@@ -27,6 +26,18 @@ public class PeopleController {
     public String getPersonByID(@PathVariable("id") int id,Model model){
         model.addAttribute("person",personDao.getPersonByID(id));
         return "people/personalPage";
+    }
+    @GetMapping("/new")
+    public String personPage(Model model){
+        model.addAttribute("person",new Person());
+        return "people/new";
+    }
+
+    @PostMapping()
+    public String create(@ModelAttribute("person")Person person){
+        personDao.save(person);
+        return "redirect:/people";
+
     }
 }
 
