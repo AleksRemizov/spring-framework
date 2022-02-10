@@ -25,6 +25,7 @@
     <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
     <guice-bootstrap.version>0.3.2</guice-bootstrap.version>
     <postgresql.version>42.3.2</postgresql.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
   </properties>
 
 
@@ -116,8 +117,9 @@
     </pluginManagement>
       <plugins>
           <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven-compiler-plugin.version}</version>
           </plugin>
       </plugins>
   </build>
