@@ -15,32 +15,41 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
     <spring.version>5.3.12</spring.version>
     <jetty-maven-plugin.version>10.0.1</jetty-maven-plugin.version>
     <thymeleaf-spring5.version>3.0.12.RELEASE</thymeleaf-spring5.version>
     <javax.servlet.version>4.0.0</javax.servlet.version>
-
+    <junit.version>4.11</junit.version>
+    <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
+    <guice-bootstrap.version>0.3.2</guice-bootstrap.version>
+    <postgresql.version>42.3.2</postgresql.version>
   </properties>
 
+
+
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>${spring.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
@@ -52,6 +61,7 @@
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -68,19 +78,26 @@
       <dependency>
           <groupId>org.embulk</groupId>
           <artifactId>guice-bootstrap</artifactId>
-          <version>0.3.2</version>
+          <version>${guice-bootstrap.version}</version>
           <scope>compile</scope>
       </dependency>
+
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>6.0.17.Final</version>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>${postgresql.version}</version>
     </dependency>
 
   </dependencies>
 
+
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.eclipse.jetty</groupId>
@@ -101,10 +118,6 @@
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <configuration>
-                  <source>8</source>
-                  <target>8</target>
-              </configuration>
           </plugin>
       </plugins>
   </build>
